@@ -1,22 +1,23 @@
-fx_version   'cerulean'
-game         'gta5'
+fx_version 'cerulean'
+game 'gta5'
+lua54 'yes'
 
-author          'Ranjit#6511'
-description     'Knife Bank System'
+author 'Ranjit#6511'
+description 'Knife Bank System'
 
 shared_scripts {
     '@qb-core/shared/locale.lua',
-    'lang/en.lua'
-}
-
-client_script 'client.lua'
-
-server_scripts {
-    'server.lua',
+    'locales/en.lua',
     'config.lua'
 }
 
-dependency 'qb-core'
-dependency 'qb-inventory'
-dependency 'qb-menu'
-dependency 'qb-target'
+client_script 'client/client.lua'
+
+server_scripts 'server/server.lua'
+
+dependency {
+    'qb-core',
+    'qb-inventory',
+    'qb-menu',
+    'qb-target'
+}
